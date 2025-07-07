@@ -14,7 +14,7 @@ Each workflow uses Kafka producers and consumers to handle streaming data and in
 
 🚧 Toll Vehicle Data Workflow
 
-ETL.py
+## ETL.py
 
 - Simulates real-time vehicle traffic at toll plazas.
 
@@ -22,7 +22,7 @@ ETL.py
 
 - Sends data to the Kafka topic toll.
 
-Streamer.py
+## Streamer.py
 
 - Kafka consumer that reads from the toll topic.
 
@@ -30,62 +30,63 @@ Streamer.py
 
 👷 Toll Employee Management Workflow
 
-index.html
+## index.html
 
-A web form for entering employee details such as name, age, location, designation, email, and phone number.
+- A web form for entering employee details such as name, age, location, designation, email, and phone number.
 
-process.py
+## process.py
 
-Flask application that handles form submissions.
+- Flask application that handles form submissions.
 
-Processes employee data, assigns IDs and salaries based on designation and location.
+- Processes employee data, assigns IDs and salaries based on designation and location.
 
-Sends formatted data to the Kafka topic tollemployee.
+- Sends formatted data to the Kafka topic tollemployee.
 
-storage.py
+## storage.py
 
-Kafka consumer that listens to the tollemployee topic.
+- Kafka consumer that listens to the tollemployee topic.
 
-Inserts employee data into MySQL tables (tollemployers, tolldesignations, and tolllocation).
+- Inserts employee data into MySQL tables (tollemployers, tolldesignations, and tolllocation).
 
-Updates toll location tables with employee count.
+- Updates toll location tables with employee count.
 
 💾 Database Tables
 
 The system uses a MySQL database named tolldata with the following tables:
 
-livetolldata: Stores real-time vehicle passage data.
+- livetolldata: Stores real-time vehicle passage data.
 
-tollemployers: Stores employee details.
+- tollemployers: Stores employee details.
 
-tolldesignations: Stores designation details and salaries.
+- tolldesignations: Stores designation details and salaries.
 
-tolllocation: Stores toll location data along with the number of employees.
+- tolllocation: Stores toll location data along with the number of employees.
 
 ⚙️ Setup Instructions
 
-Prerequisites
+## Prerequisites
 
-Python 3.x
+- Python 3.x
 
-Kafka and Zookeeper running locally (default: localhost:9092)
+- Kafka and Zookeeper running locally (default: localhost:9092)
 
-MySQL database setup with required tables
+- MySQL database setup with required tables
 
-Install dependencies
-
+## Install dependencies
+```bash
 pip install flask kafka-python mysql-connector-python
-
-Start Kafka and Zookeeper
+```
+## Start Kafka and Zookeeper
 
 Make sure Kafka and Zookeeper services are running before executing producers and consumers.
 
-Run Vehicle Data Stream
-
+## Run Vehicle Data Stream
+```bash
 python ETL.py
 python Streamer.py
-
-Run Employee Management Workflow
+```
+```bash
+## Run Employee Management Workflow
 
 # Start the Flask app
 python process.py
@@ -94,7 +95,7 @@ python process.py
 
 # Start the storage consumer
 python storage.py
-
+```
 🖥️ Web Interface
 
 Open index.html in your browser to submit new employee data.
