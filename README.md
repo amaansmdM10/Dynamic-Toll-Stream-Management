@@ -16,17 +16,17 @@ Each workflow uses Kafka producers and consumers to handle streaming data and in
 
 ETL.py
 
-Simulates real-time vehicle traffic at toll plazas.
+- Simulates real-time vehicle traffic at toll plazas.
 
-Randomly generates vehicle types, IDs, timestamps, and plaza IDs.
+- Randomly generates vehicle types, IDs, timestamps, and plaza IDs.
 
-Sends data to the Kafka topic toll.
+- Sends data to the Kafka topic toll.
 
 Streamer.py
 
-Kafka consumer that reads from the toll topic.
+- Kafka consumer that reads from the toll topic.
 
-Parses vehicle data and inserts it into the livetolldata table in MySQL.
+- Parses vehicle data and inserts it into the livetolldata table in MySQL.
 
 👷 Toll Employee Management Workflow
 
