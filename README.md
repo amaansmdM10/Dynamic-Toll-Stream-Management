@@ -2,7 +2,7 @@
 
 This repository demonstrates a simulated toll data streaming and employee management system using Python, Kafka, Flask, and MySQL. It includes real-time data generation, processing, and storage pipelines for toll vehicle data and toll employee data.
 
-📄 Overview
+## 📄 Overview
 
 The project consists of two main workflows:
 
@@ -12,7 +12,7 @@ Toll Employee Management System
 
 Each workflow uses Kafka producers and consumers to handle streaming data and integrates with a MySQL database for storage and analysis.
 
-🚧 Toll Vehicle Data Workflow
+## 🚧 Toll Vehicle Data Workflow
 
 ## ETL.py
 
@@ -28,7 +28,7 @@ Each workflow uses Kafka producers and consumers to handle streaming data and in
 
 - Parses vehicle data and inserts it into the livetolldata table in MySQL.
 
-👷 Toll Employee Management Workflow
+## 👷 Toll Employee Management Workflow
 
 ## index.html
 
@@ -50,7 +50,7 @@ Each workflow uses Kafka producers and consumers to handle streaming data and in
 
 - Updates toll location tables with employee count.
 
-💾 Database Tables
+## 💾 Database Tables
 
 The system uses a MySQL database named tolldata with the following tables:
 
@@ -62,7 +62,7 @@ The system uses a MySQL database named tolldata with the following tables:
 
 - tolllocation: Stores toll location data along with the number of employees.
 
-⚙️ Setup Instructions
+## ⚙️ Setup Instructions
 
 ## Prerequisites
 
@@ -85,9 +85,8 @@ Make sure Kafka and Zookeeper services are running before executing producers an
 python ETL.py
 python Streamer.py
 ```
-```bash
 ## Run Employee Management Workflow
-
+```bash
 # Start the Flask app
 python process.py
 
@@ -96,22 +95,22 @@ python process.py
 # Start the storage consumer
 python storage.py
 ```
-🖥️ Web Interface
+## 🖥️ Web Interface
 
-Open index.html in your browser to submit new employee data.
+- Open index.html in your browser to submit new employee data.
 
-Submitted data will be processed and stored in MySQL.
+- Submitted data will be processed and stored in MySQL.
 
-💬 Contributing
+## 💬 Contributing
 
 Pull requests are welcome. For significant changes, please open an issue first to discuss what you'd like to change.
 
-📄 License
+## 📄 License
 
 This project is open-source and available under the MIT License.
 
-✉️ Contact
+## ✉️ Contact
 
 For questions or suggestions, feel free to open an issue or reach out directly!
 
-🚦 Happy streaming!
+## 🚦 Happy streaming!
